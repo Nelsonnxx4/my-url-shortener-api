@@ -19,7 +19,7 @@ export const createShortUrl = async (req: Request, res: Response) => {
 
 export const redirectUrl = async (req: Request, res: Response) => {
 	try {
-		const { slug } = req.params;
+		const slug = req.params.slug as string;
 		const originalUrl = await resolveSlug(slug);
 
 		if (!originalUrl) {
@@ -36,7 +36,8 @@ export const redirectUrl = async (req: Request, res: Response) => {
 
 export const getUrlStats = async (req: Request, res: Response) => {
 	try {
-		const { slug } = req.params;
+		const slug = req.params.slug as string;
+
 		const original = await resolveSlug(slug);
 
 		if (!original) {
