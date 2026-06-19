@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "files": {
+    ".gitignore": "7d3512835022f11702cc7b77a91f1cbc632f58f80af77b0090e875c49b0cc84a",
+    "package.json": "b1876257d1fac06cce1e2e51f5ba131856cbdf5f2f8fbb081284cfa452485fd8",
+    "src\\app.ts": "c719740eda39a7fb3d9810aa8a36630f690b388fbd9f528733d8274ea08cde47",
+    "src\\controllers\\url.controller.ts": "3d35504b7cc42512e85ae000490bb955b60a1ffe775d7c2569f7379c8823b895",
+    "src\\middleware\\validate.ts": "fc0b4f0f752291ffb8d3885428016cc0c605e172890f10488bca6430c9be65eb",
+    "src\\routes\\url.routes.ts": "65f0e2e609fdf336bbd37da9c7217bff231e3d9026901ffe8a23701e7113de72",
+    "src\\services\\url.service.ts": "bbd23f4ed7b6ad3f83fc5e315597261a50336314289b05cf9730c722787a50e8"
+  }
+}
