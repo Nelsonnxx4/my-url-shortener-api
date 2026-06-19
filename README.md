@@ -244,8 +244,8 @@ This project is licensed under the ISC License.
 
 ## Author Info
 
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/nelsonnxx4)
-- **X (Twitter)**: [@yourhandle](https://x.com/nelsonnxx4)
+- **LinkedIn**: [Nelson .](https://linkedin.com/in/nelsonnxx4)
+- **X (Twitter)**: [Nelson](https://x.com/nelsonnxx4)
 
 ---
 
