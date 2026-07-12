@@ -5,6 +5,9 @@ import {
 	getStats,
 	incrementClicks,
 } from "../services/url.service";
+import { getGithubRepoMeta } from "../services/github.service";
+import { renderGithubPreviewPage } from "../utils/og-page";
+import { isSocialBot } from "../utils/bot-detector";
 
 export const createShortUrl = async (req: Request, res: Response) => {
 	try {
@@ -28,6 +31,16 @@ export const redirectUrl = async (req: Request, res: Response) => {
 		}
 
 		await incrementClicks(slug);
+
+		if (isSocialBot(req.headers["user-agent"])) {
+			const githubMeta = await getGithubRepoMeta(originalUrl);
+			if (githubMeta) {
+				const shortUrl = `${process.env.BASE_URL || "http://localhost:3000"}/${slug}`;
+				res.status(200).type("html").send(renderGithubPreviewPage(shortUrl, githubMeta));
+				return;
+			}
+		}
+
 		res.redirect(301, originalUrl);
 	} catch (err) {
 		res.status(500).json({ error: "Redirect failed" });
